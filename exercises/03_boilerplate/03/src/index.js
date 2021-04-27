@@ -18,21 +18,20 @@ const app = (
       </div>
     </header>
 
-    <body>
+    <div id="main">
       <h1>SUBSCRIBE</h1>
       <p>Sign up with your email address to receive news and updates</p>
-      <form id ="form">
+      <form>
         <input type="text" placeholder="First Name"></input>
         <input type="text" placeholder="Last Name"></input>
         <input type="text" placeholder="Email"></input>
       </form>
       <button>Subscribe</button>
-    </body>
+    </div>
 
     <footer></footer>
   </div>
 );
 
 const rootElement = document.getElementById("root");
-// we render the JSX element using the ReactDOM package
 ReactDOM.render(app, rootElement);

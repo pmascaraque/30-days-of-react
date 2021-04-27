@@ -7,8 +7,7 @@ import js_logo from "./images/js_logo.jpg";
 import "./index.css"
 
 const app = (
-  <div className="App">
-
+  <div>
     <header>
       <h1>Front End Technologies</h1>
       <div id="w3_container">
@@ -20,7 +19,14 @@ const app = (
     </header>
 
     <body>
-      
+      <h1>SUBSCRIBE</h1>
+      <p>Sign up with your email address to receive news and updates</p>
+      <form id ="form">
+        <input type="text" placeholder="First Name"></input>
+        <input type="text" placeholder="Last Name"></input>
+        <input type="text" placeholder="Email"></input>
+      </form>
+      <button>Subscribe</button>
     </body>
 
     <footer></footer>

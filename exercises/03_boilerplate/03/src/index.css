@@ -40,3 +40,25 @@ input{
     border-radius: 10px;
     font-size: 15px;
 }
+
+footer{
+    text-align: left;
+}
+
+#sensei{
+    border-radius: 50%;
+    width: 20%;
+}
+
+#skills{
+    text-align: left;
+    display: flex;
+    margin-top: 20px;
+}
+
+#skills > p{
+    background-color: #2acfcf;
+    color: white;
+    padding: 10px;
+    border-radius: 15%;
+}

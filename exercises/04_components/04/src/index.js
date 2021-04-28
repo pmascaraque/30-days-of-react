@@ -58,10 +58,33 @@ const Footer = () => (
   </footer>
 );
 
+const Colors = () => {
+  const hexaColor = () => {
+    let str = "0123456789abcdef";
+    let color = "";
+    for (let i = 0; i < 6; i++) {
+      let index = Math.floor(Math.random() * str.length);
+      color += str[index];
+    }
+    return "#" + color;
+  };
+
+  return (
+    <div id="colors">
+      <div style={{ backgroundColor: hexaColor() }}>{hexaColor()}</div>
+      <div style={{ backgroundColor: hexaColor() }}>{hexaColor()}</div>
+      <div style={{ backgroundColor: hexaColor() }}>{hexaColor()}</div>
+      <div style={{ backgroundColor: hexaColor() }}>{hexaColor()}</div>
+      <div style={{ backgroundColor: hexaColor() }}>{hexaColor()}</div>
+    </div>
+  );
+};
+
 const App = () => (
   <div className="app">
     <Header />
     <Main />
+    <Colors />
     <Footer />
   </div>
 );

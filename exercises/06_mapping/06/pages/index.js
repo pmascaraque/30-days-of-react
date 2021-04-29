@@ -1,12 +1,19 @@
-  
 import React from "react";
-import Layout from "../components/Layout";
+import Link from "next/link";
 
 function Home() {
   return (
-      <Layout>
-      <p>This is the home Page</p>
-      </Layout>
+    <div class="index">
+      <Link href="/numbers">
+        <a>Number Generator</a>
+      </Link>
+      <Link href="/colors">
+        <a>Hexadecimal Colors</a>
+      </Link>
+      <Link href="/data">
+        <a>World Population</a>
+      </Link>
+    </div>
   );
 }
 

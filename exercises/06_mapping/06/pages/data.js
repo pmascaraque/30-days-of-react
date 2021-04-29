@@ -1,3 +1,12 @@
-export default function Data() {
-    return <h1>Here goes the world data.</h1>
-  }
+import React from "react";
+import Layout from "../components/Layout";
+
+function Data() {
+  return (
+    <Layout>
+      <p>This is the data Page</p>
+    </Layout>
+  );
+}
+
+export default Data;

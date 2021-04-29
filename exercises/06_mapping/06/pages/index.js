@@ -1,7 +1,13 @@
-export default function Home() {
+  
+import React from "react";
+import Layout from "../components/Layout";
+
+function Home() {
   return (
-    <div>
-     <p>Hello</p>
-    </div>
-  )
+      <Layout>
+      <p>This is the home Page</p>
+      </Layout>
+  );
 }
+
+export default Home;

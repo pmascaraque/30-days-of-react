@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <div class="header">
+    <div className="header">
       <Link href="/">
         <a>Home</a>
       </Link>

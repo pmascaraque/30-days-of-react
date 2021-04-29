@@ -44,3 +44,9 @@ a:hover{
     padding-top: 10px;
     border-top: 1px #b5179e solid;
 }
+
+.countrySub{
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+}

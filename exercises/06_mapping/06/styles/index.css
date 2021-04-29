@@ -32,3 +32,15 @@ a:hover{
     grid-template-columns: auto auto auto auto;
     border-bottom: 1px #b5179e solid;
 }
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    text-align:center;
+    width: 100%;
+    background-color: #ffafcc;
+    margin: 0;
+    height: 2em;
+    padding-top: 10px;
+    border-top: 1px #b5179e solid;
+}

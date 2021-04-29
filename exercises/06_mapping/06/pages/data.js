@@ -24,8 +24,8 @@ const MapNumbers = ({ numbers }) => {
 const Country = ({ country: { name, population } }) => {
   return (
     <div className="countrySub">
-      <h1>{name}</h1>
-      <small>{population}</small>
+      <h2>{name}</h2>
+      <h2>{population}</h2>
     </div>
   );
 };
@@ -40,8 +40,10 @@ const Countries = ({ countries }) => {
 function Data() {
   return (
     <Layout>
-      <div>
-        <h1>Countries List</h1>
+      <div className="data">
+        <h1>30 days of react</h1>
+        <h2>World population</h2>
+        <p> Ten most populated countries</p>
         <Countries countries={countries} />
       </div>
     </Layout>

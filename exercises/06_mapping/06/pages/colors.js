@@ -38,7 +38,7 @@ export const colors = [
 
 const Tile = ({ tile }) => {
   return (
-    <div className="subTile" style={{backgroundColor: tile}}>
+    <div className="subTile" style={{ backgroundColor: tile }}>
       <h1>{tile}</h1>
     </div>
   );
@@ -52,8 +52,10 @@ const Tiles = ({ colors }) => {
 function Colors() {
   return (
     <Layout>
-      <h1>30 Days of React</h1>
-      <h3>Hexadecimal Colors</h3>
+      <div className="titles">
+        <h1>30 Days of React</h1>
+        <h3>Hexadecimal Colors</h3>
+      </div>
       <Tiles colors={colors} />
     </Layout>
   );

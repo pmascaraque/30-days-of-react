@@ -63,7 +63,7 @@ const Tiles = ({ numbers }) => {
 function Numbers() {
   return (
     <Layout>
-      <div>
+      <div className="titles">
         <h1>30 Days of React</h1>
         <h3>Number Generator</h3>
         <Tiles numbers={numbers} />

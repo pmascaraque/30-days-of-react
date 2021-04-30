@@ -20,7 +20,6 @@ const styles = {
 };
 
 const Country = ({ country: { name, population } }) => {
-
   return (
     <div className="countrySub">
       <h2>{name}</h2>
@@ -28,7 +27,7 @@ const Country = ({ country: { name, population } }) => {
         className="bar"
         style={{
           backgroundColor: styles.color,
-          width: `${(100*population) / 7693165599}%`
+          width: `${(100 * population) / 7693165599}%`,
         }}
       ></div>
       <h2>{population}</h2>
@@ -46,12 +45,12 @@ const Countries = ({ countries }) => {
 function Data() {
   return (
     <Layout>
-      <div className="data">
+      <div className="titles">
         <h1>30 days of react</h1>
         <h2>World population</h2>
         <p> Ten most populated countries</p>
-        <Countries countries={countries} />
       </div>
+      <Countries countries={countries} />
     </Layout>
   );
 }

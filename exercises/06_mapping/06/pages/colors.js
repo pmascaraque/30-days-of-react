@@ -38,7 +38,7 @@ export const colors = [
 
 const Tile = ({ tile }) => {
   return (
-    <div className="subTile">
+    <div className="subTile" style={{backgroundColor: tile}}>
       <h1>{tile}</h1>
     </div>
   );

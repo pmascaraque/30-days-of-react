@@ -15,16 +15,22 @@ export const countries = [
   { name: "Japan", population: 126960000 },
 ];
 
-const MapNumbers = ({ numbers }) => {
-  // modifying array to array of li JSX
-  const list = numbers.map((number) => <li>{number}</li>);
-  return list;
+const styles = {
+  color: "Fuchsia",
 };
 
 const Country = ({ country: { name, population } }) => {
+
   return (
     <div className="countrySub">
       <h2>{name}</h2>
+      <div
+        className="bar"
+        style={{
+          backgroundColor: styles.color,
+          width: `${(100*population) / 7693165599}%`
+        }}
+      ></div>
       <h2>{population}</h2>
     </div>
   );

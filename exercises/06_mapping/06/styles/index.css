@@ -54,12 +54,10 @@ a:hover{
     margin: 0;
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     height: 3em;
 }
 
-.data > div{
-    padding: 0;
-    margin: 0;
-    
+.bar{
+    height: 2em;
 }

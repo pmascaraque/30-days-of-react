@@ -38,7 +38,7 @@ export const numbers = [
 
 const isPrime = (num) => {
   for (let i = 2; i < num; i++) if (num % i === 0) return false;
-  return num > 1;
+  return true;
 };
 
 const Tile = ({ tile }) => {
@@ -49,7 +49,7 @@ const Tile = ({ tile }) => {
   else color = "yellow";
 
   return (
-    <div style={{ backgroundColor: color }}>
+    <div className="subTile" style={{ backgroundColor: color }}>
       <h1>{tile}</h1>
     </div>
   );
@@ -57,7 +57,7 @@ const Tile = ({ tile }) => {
 
 const Tiles = ({ numbers }) => {
   const tileList = numbers.map((tile) => <Tile key={tile} tile={tile} />);
-  return <div>{tileList}</div>;
+  return <div className="tiles">{tileList}</div>;
 };
 
 function Numbers() {

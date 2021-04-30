@@ -61,3 +61,16 @@ a:hover{
 .bar{
     height: 2em;
 }
+
+.tiles{
+    margin: 5em 10% 0 10%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    color: white;
+    text-align: center;
+}
+
+.subTile{
+    border: 1px solid white;
+    padding: 18px;
+}

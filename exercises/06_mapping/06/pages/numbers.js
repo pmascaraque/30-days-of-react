@@ -1,42 +1,66 @@
 import React from "react";
 import Layout from "../components/Layout";
 
-const MapNumbers = ({ numbers }) => {
-  // modifying array to array of li JSX
-  const list = numbers.map((number) => <li>{number}</li>);
-  return list;
-};
-
-const countries = [
-  { name: "Finland", city: "Helsinki" },
-  { name: "Sweden", city: "Stockholm" },
-  { name: "Denmark", city: "Copenhagen" },
-  { name: "Norway", city: "Oslo" },
-  { name: "Iceland", city: "Reykjavík" },
+export const numbers = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
 ];
 
-const Country = ({ country: { name, city } }) => {
+const Tile = ({ tile }) => {
+  let color;
+
+  if (tile % 2 == 0) color = "green";
+  else if (tile % 2 != 0) color = "yellow";
+  else color = "red";
+
   return (
-    <div>
-      <h1>{name}</h1>
-      <small>{city}</small>
+    <div style={{ backgroundColor: color }}>
+      <h1>{tile}</h1>
     </div>
   );
 };
 
-const Countries = ({ countries }) => {
-  const countryList = countries.map((country) => (
-    <Country key={country.name} country={country} />
-  ));
-  return <div>{countryList}</div>;
+const Tiles = ({ numbers }) => {
+  const tileList = numbers.map((tile) => <Tile key={tile} tile={tile} />);
+  return <div>{tileList}</div>;
 };
 
 function Numbers() {
   return (
     <Layout>
       <div>
-        <h1>Countries List</h1>
-        <Countries countries={countries} />
+        <h1>30 Days of React</h1>
+        <h3>Number Generator</h3>
+        <Tiles numbers={numbers} />
       </div>
     </Layout>
   );

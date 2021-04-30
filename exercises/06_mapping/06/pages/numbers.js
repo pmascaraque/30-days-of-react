@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 
 export const numbers = [
+  0,
   1,
   2,
   3,
@@ -35,12 +36,17 @@ export const numbers = [
   31,
 ];
 
+const isPrime = (num) => {
+  for (let i = 2; i < num; i++) if (num % i === 0) return false;
+  return num > 1;
+};
+
 const Tile = ({ tile }) => {
   let color;
 
   if (tile % 2 == 0) color = "green";
-  else if (tile % 2 != 0) color = "yellow";
-  else color = "red";
+  else if (isPrime(tile)) color = "red";
+  else color = "yellow";
 
   return (
     <div style={{ backgroundColor: color }}>

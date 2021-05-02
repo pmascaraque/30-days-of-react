@@ -18,6 +18,10 @@ const app = (
       <p>    CSS</p>
       <p>    JavaScript</p>
       <img src={asabeneh} alt="Asabeneh" ></img>
+      <h2>Asabeneh Yetayeh</h2>
+      <p className="blueButton">Greet People</p>
+      <p className="blueButton">Show Time</p>
+      <p className="blueButton">Change Background</p>
     </div>
   </div>
 );

@@ -1,39 +1,27 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import asabeneh from "./images/asabeneh.jpg";
 
 export default function Html() {
   const [backGroundColor, setBackGroundColor] = useState("white");
 
-  const colors = ["red", "blue", "green", "white"];
-  return (
-    <div style={{ backgroundColor: backGroundColor }}>
-      <div>
-        <h1>Welcome to 30 Days of React</h1>
-        <h2>Getting Started React</h2>
-        <h3>Javascript Library</h3>
-        <h4>Asabeneh Yetayeh</h4>
-        <h5>Oct 7, 2020</h5>
-      </div>
+  const colors = ["Aqua", "DarkOliveGreen", "DarkRed", "Indigo"];
 
-      <div>
-        <p>Prerequisites to get started with React JS:</p>
-        <p> HTML</p>
-        <p> CSS</p>
-        <p> JavaScript</p>
-        <img src={asabeneh} alt="Asabeneh"></img>
-        <h2>Asabeneh Yetayeh</h2>
-        <p className="blueButton">Greet People</p>
-        <p className="blueButton">Show Time</p>
-        <button
-          className="blueButton"
-          onClick={() =>
-            setBackGroundColor(colors[Math.floor(Math.random() * 4)])
-          }
-        >
-          Change Background
-        </button>
-      </div>
+  const greetPeople = () =>
+    alert("Welcome to 30 days of React Challenge, 2021");
+
+  return (
+    <div style={{ backgroundColor: backGroundColor, height: 700 }}>
+      <button onClick={greetPeople}>Greet People</button>
+
+      <button>Show Time</button>
+
+      <button
+        onClick={() =>
+          setBackGroundColor(colors[Math.floor(Math.random() * 4)])
+        }
+      >
+        Change Background
+      </button>
     </div>
   );
 }

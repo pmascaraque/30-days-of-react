@@ -9,11 +9,37 @@ export default function Html() {
   const greetPeople = () =>
     alert("Welcome to 30 days of React Challenge, 2021");
 
+  const showDate = (time) => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const month = months[time.getMonth()].slice(0, 3);
+    const year = time.getFullYear();
+    const date = time.getDate();
+    return ` ${month} ${date}, ${year}`;
+  };
+
+  const handleTime = () => {
+    alert(showDate(new Date()));
+  };
+
   return (
     <div style={{ backgroundColor: backGroundColor, height: 700 }}>
       <button onClick={greetPeople}>Greet People</button>
 
-      <button>Show Time</button>
+      <button onClick={handleTime}>Show Time</button>
 
       <button
         onClick={() =>

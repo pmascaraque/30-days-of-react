@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 import asabeneh from "./images/asabeneh.jpg";
 
 export default function Html() {
-  const [backGroundColor, setBackGroundColor] = useState("red");
+  const [backGroundColor, setBackGroundColor] = useState("white");
+
+  const colors = ["red", "blue", "green", "white"];
   return (
-    <div>
+    <div style={{ backgroundColor: backGroundColor }}>
       <div>
         <h1>Welcome to 30 Days of React</h1>
         <h2>Getting Started React</h2>
@@ -23,8 +25,14 @@ export default function Html() {
         <h2>Asabeneh Yetayeh</h2>
         <p className="blueButton">Greet People</p>
         <p className="blueButton">Show Time</p>
-        <button className="blueButton" onClick={() => setBackGroundColor("blue")}>Change Background</button>
-        {console.log(backGroundColor)}
+        <button
+          className="blueButton"
+          onClick={() =>
+            setBackGroundColor(colors[Math.floor(Math.random() * 4)])
+          }
+        >
+          Change Background
+        </button>
       </div>
     </div>
   );

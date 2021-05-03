@@ -6,9 +6,6 @@ export default function Html() {
 
   const colors = ["Aqua", "DarkOliveGreen", "DarkRed", "Indigo"];
 
-  const greetPeople = () =>
-    alert("Welcome to 30 days of React Challenge, 2021");
-
   const showDate = (time) => {
     const months = [
       "January",
@@ -31,8 +28,15 @@ export default function Html() {
     return ` ${month} ${date}, ${year}`;
   };
 
+  const greetPeople = () =>
+    alert("Welcome to 30 days of React Challenge, 2021");
+
   const handleTime = () => {
     alert(showDate(new Date()));
+  };
+
+  const changeBackground = () => {
+    setBackGroundColor(colors[Math.floor(Math.random() * 4)]);
   };
 
   return (
@@ -41,13 +45,7 @@ export default function Html() {
 
       <button onClick={handleTime}>Show Time</button>
 
-      <button
-        onClick={() =>
-          setBackGroundColor(colors[Math.floor(Math.random() * 4)])
-        }
-      >
-        Change Background
-      </button>
+      <button onClick={changeBackground}>Change Background</button>
     </div>
   );
 }

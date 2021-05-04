@@ -218,7 +218,6 @@ export default function Html() {
     setCountryData(json);
   };
 
-  if (countryData) console.log(countryData[0].flag);
   return (
     <div className="container">
       <img src={countryData ? countryData[0].flag : ""} alt =""></img>

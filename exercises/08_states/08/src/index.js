@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 export default function Html() {
+  const [countryData, setCountryData] = useState(0);
+
   const countries = [
     "Afghanistan",
     "Albania",
@@ -9,7 +11,6 @@ export default function Html() {
     "Andorra",
     "Angola",
     "Anguilla",
-    "Antigua &amp; Barbuda",
     "Argentina",
     "Armenia",
     "Aruba",
@@ -27,7 +28,6 @@ export default function Html() {
     "Bermuda",
     "Bhutan",
     "Bolivia",
-    "Bosnia &amp; Herzegovina",
     "Botswana",
     "Brazil",
     "British Virgin Islands",
@@ -47,7 +47,6 @@ export default function Html() {
     "Congo",
     "Cook Islands",
     "Costa Rica",
-    "Cote D Ivoire",
     "Croatia",
     "Cruise Ship",
     "Cuba",
@@ -159,7 +158,6 @@ export default function Html() {
     "Romania",
     "Russia",
     "Rwanda",
-    "Saint Pierre &amp; Miquelon",
     "Samoa",
     "San Marino",
     "Satellite",
@@ -175,7 +173,6 @@ export default function Html() {
     "South Korea",
     "Spain",
     "Sri Lanka",
-    "St Kitts &amp; Nevis",
     "St Lucia",
     "St Vincent",
     "St. Lucia",
@@ -189,14 +186,11 @@ export default function Html() {
     "Tajikistan",
     "Tanzania",
     "Thailand",
-    "Timor L'Este",
     "Togo",
     "Tonga",
-    "Trinidad &amp; Tobago",
     "Tunisia",
     "Turkey",
     "Turkmenistan",
-    "Turks &amp; Caicos",
     "Uganda",
     "Ukraine",
     "United Arab Emirates",
@@ -206,23 +200,26 @@ export default function Html() {
     "Uzbekistan",
     "Venezuela",
     "Vietnam",
-    "Virgin Islands (US)",
     "Yemen",
     "Zambia",
     "Zimbabwe",
   ];
 
-  const getRandomCountry = () => countries[Math.round(Math.random() * 206)];
+  const randomCountry = countries[Math.round(Math.random() * 206)];
 
+  const getData = async () => {
+    const request = await fetch(
+      "https://restcountries.eu/rest/v2/name/" + randomCountry + "?fields=capital;name;flag;population;currency;languages"
+    );
+    const json = await request.json();
+    setCountryData(json);
+  };
 
-
-
+  console.log(countryData);
   return (
     <div>
-      {" "}
-      use the restcountries api and search with a random number, then get fetch
-      them with curly brackets and the population, country, flag, etc
-      https://restcountries.eu/rest/v2/name/{getRandomCountry}?fields=name;capital;languages;population;currencies
+      <div></div>
+      <button onClick={getData}>Select Country</button>
     </div>
   );
 }

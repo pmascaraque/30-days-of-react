@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import main from "./styles/main.css";
 
 export default function Html() {
   const [countryData, setCountryData] = useState(0);
@@ -205,7 +206,7 @@ export default function Html() {
     "Zimbabwe",
   ];
 
-  const randomCountry = countries[Math.round(Math.random() * 206)];
+  const randomCountry = countries[Math.round(Math.random() * 195)];
 
   const getData = async () => {
     const request = await fetch(
@@ -219,13 +220,13 @@ export default function Html() {
 
   if (countryData) console.log(countryData[0].flag);
   return (
-    <div>
+    <div className="container">
       <img src={countryData ? countryData[0].flag : ""} alt =""></img>
-      <div>{countryData ? countryData[0].name : "Country"}</div>
-      <div>Capital: {countryData ? countryData[0].capital : ""}</div>
-      <div>Language: {countryData ? countryData[0].languages[0].name : ""}</div>
-      <div>Population: {countryData ? countryData[0].population : ""}</div>
-      <div>Currency: {countryData ? countryData[0].currencies[0].name : ""}</div>
+      <h1 className="name"><b>{countryData ? countryData[0].name : "Country"}</b></h1>
+      <div><b>Capital:</b> {countryData ? countryData[0].capital : ""}</div>
+      <div><b>Language:</b> {countryData ? countryData[0].languages[0].name : ""}</div>
+      <div><b>Population:</b> {countryData ? countryData[0].population : ""}</div>
+      <div><b>Currency:</b> {countryData ? countryData[0].currencies[0].name : ""}</div>
       <button onClick={getData}>Select Country</button>
     </div>
   );

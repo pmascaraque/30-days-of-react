@@ -1,0 +1,32 @@
+*{
+    background-color:#deeaee;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+img{
+    width: 30%;
+    height: 30%;
+}
+
+.container{
+    margin-top: 5em;
+}
+
+.container > h1 {
+    margin-bottom: 10px;
+}
+
+.container > div {
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 
+}
+
+button{
+    padding: 5px;
+    background-color: #b1cbbb;
+}

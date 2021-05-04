@@ -211,16 +211,21 @@ export default function Html() {
     const request = await fetch(
       "https://restcountries.eu/rest/v2/name/" +
         randomCountry +
-        "?fields=capital;name;flag;population;currency;languages"
+        "?fields=capital;name;flag;population;currencies;languages"
     );
     const json = await request.json();
     setCountryData(json);
   };
 
-  if (countryData) console.log(countryData[0].capital);
+  if (countryData) console.log(countryData[0].flag);
   return (
     <div>
-      <div>Capital: {countryData ? countryData[0].capital : "N/A"}</div>
+      <img src={countryData ? countryData[0].flag : ""} alt =""></img>
+      <div>{countryData ? countryData[0].name : "Country"}</div>
+      <div>Capital: {countryData ? countryData[0].capital : ""}</div>
+      <div>Language: {countryData ? countryData[0].languages[0].name : ""}</div>
+      <div>Population: {countryData ? countryData[0].population : ""}</div>
+      <div>Currency: {countryData ? countryData[0].currencies[0].name : ""}</div>
       <button onClick={getData}>Select Country</button>
     </div>
   );

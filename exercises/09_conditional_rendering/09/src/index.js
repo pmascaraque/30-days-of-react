@@ -2,7 +2,6 @@ import ReactDOM from "react-dom";
 import "./styles/index.css";
 
 const App = () => {
-
   const getSeasonColor = () => {
     let div_1_color;
 
@@ -22,13 +21,17 @@ const App = () => {
       default:
         div_1_color = "green";
     }
-    return (div_1_color);
+    return div_1_color;
   };
 
   return (
     <div>
-      <div style={{ backgroundColor: getSeasonColor(), height: 300 }}></div>
-      <div style={{ backgroundColor: "blue", height: 300 }}></div>
+      <h1 style={{ backgroundColor: getSeasonColor(), height: 300 }}>
+        Winter: White | Spring: Green | Summer: Yellow | Autumn: Brown
+      </h1>
+      <h1 style={{ backgroundColor: "blue", height: 300 }}>
+        Morning: Blue | Evening: Dark Blue | Night: Black
+      </h1>
     </div>
   );
 };

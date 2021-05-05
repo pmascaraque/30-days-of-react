@@ -3,25 +3,26 @@ import "./styles/index.css";
 
 const App = () => {
   const getSeasonColor = () => {
-    let div_1_color;
-
-    switch (new Date().getMonth) {
-      case (0, 1, 2):
-        div_1_color = "white";
-        break;
-      case (3, 4, 5):
-        div_1_color = "green";
-        break;
-      case (6, 7, 8):
-        div_1_color = "yellow";
-        break;
-      case (9, 10, 11):
-        div_1_color = "brown";
-        break;
+    switch (new Date().getMonth()) {
+      case 0:
+      case 1:
+      case 2:
+        return "white";
+      case 3:
+      case 4:
+      case 5:
+        return "blue";
+      case 6:
+      case 7:
+      case 8:
+        return "yellow";
+      case 9:
+      case 10:
+      case 11:
+        return "brown";
       default:
-        div_1_color = "green";
+        return "orange";
     }
-    return div_1_color;
   };
 
   return (

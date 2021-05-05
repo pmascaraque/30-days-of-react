@@ -11,7 +11,7 @@ const App = () => {
         Winter: White | Spring: Green | Summer: Yellow | Autumn: Brown
       </h1>
       <h1 style={{ backgroundColor: getTimeColor, height: 300 }}>
-        Morning: Blue | Evening: Dark Blue | Night: Black
+        Morning: Blue | Evening: Brown | Night: Black
       </h1>
     </div>
   );

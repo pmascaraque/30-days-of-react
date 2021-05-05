@@ -7,7 +7,7 @@ const getSeasonColor = () => {
     case 3:
     case 4:
     case 5:
-      return "blue";
+      return "green";
     case 6:
     case 7:
     case 8:
